@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'python:3.9-slim'  # Official Python image
+            args '-v /tmp:/tmp'  # Optional volume mounts
+        }
+    }
     
     stages {
         stage('Setup') {
