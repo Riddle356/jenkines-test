@@ -1,8 +1,9 @@
 pipeline {
     agent {
+        echo 'Setting up Pythont...'
         docker {
-            image 'python:3.9-slim'  # Official Python image
-            args '-v /tmp:/tmp'  # Optional volume mounts
+            image 'python:3.9-slim'
+            args '-v /tmp:/tmp'
         }
     }
     
