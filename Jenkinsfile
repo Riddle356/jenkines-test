@@ -1,6 +1,5 @@
 pipeline {
     agent {
-        echo 'Setting up Pythont...'
         docker {
             image 'python:3.9-slim'
             args '-v /tmp:/tmp'
